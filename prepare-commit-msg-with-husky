@@ -1,18 +1,17 @@
 #!/bin/sh
 
+# HOW TO USE 
+#
 # This pre-commit hook adds the Jira ticket number to the commit
 # message. This hook assumes the branch name will follow the format
-# of
-# [some prefix like feat]/[Jira ticket number]-[description of the branch (optional)]
-# e.g. feat/AGRO-766-apollo-schemas
+# of [some prefix like feat]/[Jira ticket number]-[description of the branch (optional)]
+# e.g. feat/agro-766-apollo-schemas
 #
-# it will prepend a string like 'feat(AGRO-766): ' to the commit message
+# it will prepend a string like 'feat(AGRO-766): ' to the commit message -- 'conventional changelog' format 
 #
-# Usage:
+# Installation:
 # copy this file locally and save it to your repo as .git/hooks/prepare-commit-msg and set the exec bit on it
-#
-# You can also use this as a global hook (will run for all your git repos). It might make your life harder as it will
-# apply the branch naming convention to every repo you interact with locally. Best to just use it on a case by case.
+# Husky scripts will run after this script (see last lines)
 
 COMMIT_MSG_FILE=$1
 
