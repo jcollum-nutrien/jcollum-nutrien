@@ -1,8 +1,5 @@
 #!/bin/sh
 
-
-#!/bin/bash
-
 # This pre-commit hook adds the Jira ticket number to the commit
 # message. This hook assumes the branch name will follow the format
 # of
